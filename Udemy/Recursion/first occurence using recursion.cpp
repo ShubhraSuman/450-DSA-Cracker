@@ -1,10 +1,10 @@
-int firstOccurence(vector<int> arr,int n,int element)
+int firstOccurence(vector<int> arr,int n,int element,int i)
 {
-    if(n<0)
+    if(i>n)
     return -1;
-    if(arr[n-1]==element)
+    if(arr[i]==element)
     {
-        return n-1;
+        return i;
     }
-    return firstOccurence(arr,n-1,element);
+    return firstOccurence(arr,n,element,i+1);
 }
